@@ -4,25 +4,37 @@ A powerful Chrome extension that uses AI to generate thoughtful comments on Link
 
 ![LinkedIn AI Auto Commenter](https://img.shields.io/badge/Chrome-Extension-green?logo=google-chrome)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.0.0-orange)
+![Version](https://img.shields.io/badge/Version-1.1.0-orange)
 
 ## ✨ Features
 
 - **AI-Powered Comments**: Generate contextually relevant comments based on the post content
+- **Multiple AI Providers**: Support for both OpenAI (GPT) and Google Gemini models
 - **Multiple Comment Styles**: Choose between short, long, or emoji-enhanced comments
-- **Tone Selection**: Select from various comment tones (Professional, Casual, Supportive, etc.)
+- **Tone Selection**: Select from various comment tones (Professional, Casual, Supportive, Thoughtful, Enthusiastic)
 - **Seamless Integration**: Works directly within LinkedIn's interface
 - **Customizable API**: Use your preferred AI service by configuring the API key
 - **Smart Extraction**: Accurately extracts post content from LinkedIn's complex DOM structure
+- **Modern UI**: Clean, intuitive interface with smooth animations and helpful notifications
 
 ## 🚀 Installation
 
+### From Source
+
+1. Clone this repository to your local machine:
+   ```
+   git clone https://github.com/yourusername/linkedin-ai-auto-commenter.git
+   ```
+2. Open Google Chrome and navigate to `chrome://extensions/`
+3. Enable "Developer mode" using the toggle in the top right corner
+4. Click "Load unpacked" and select the folder where you cloned the repository
+5. The extension should now appear in your extensions list and is ready to use!
+
+### From Release
+
 1. Download the extension files from the [Releases](https://github.com/yourusername/linkedin-ai-auto-commenter/releases) page
 2. Unzip the downloaded file to a location of your choice
-3. Open Google Chrome and navigate to `chrome://extensions/`
-4. Enable "Developer mode" using the toggle in the top right corner
-5. Click "Load unpacked" and select the folder where you unzipped the extension
-6. The extension should now appear in your extensions list and is ready to use!
+3. Follow steps 2-5 from the "From Source" section above
 
 ## 📖 Usage
 
@@ -43,10 +55,26 @@ A powerful Chrome extension that uses AI to generate thoughtful comments on Link
 
 1. Click the extension icon in your Chrome toolbar
 2. Select "Options" from the dropdown menu
-3. Enter your API key in the designated field
-4. Save your changes
+3. Choose your preferred AI provider (OpenAI or Google Gemini)
+4. Enter your API key in the designated field
+5. Select the model you want to use (or use the default)
+6. Save your changes
 
-The extension supports various AI services. Make sure your API key is valid and has sufficient credits for generating comments.
+#### OpenAI Setup
+
+1. Sign up or log in to your [OpenAI account](https://platform.openai.com/)
+2. Navigate to the API keys section
+3. Create a new API key
+4. Copy the key and paste it into the extension options
+
+#### Google Gemini Setup
+
+1. Sign up or log in to your [Google AI Studio](https://aistudio.google.com/)
+2. Navigate to the API keys section
+3. Create a new API key
+4. Copy the key and paste it into the extension options
+
+The extension supports both OpenAI and Google Gemini models. Make sure your API key is valid and has sufficient credits for generating comments.
 
 ## 🔧 Technical Details
 
@@ -80,6 +108,25 @@ Contributions are welcome! If you'd like to contribute to this project:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+### Development Guidelines
+
+- Follow the existing code style and conventions
+- Add comments to explain complex functionality
+- Test your changes thoroughly before submitting
+- Ensure all UI elements are responsive and accessible
+- Update documentation as needed
+
+### Reporting Issues
+
+When reporting issues, please include:
+
+- Chrome version and OS
+- Extension version
+- Steps to reproduce the issue
+- Expected vs. actual behavior
+- Screenshots if applicable
+- Any error messages from the console
+
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
@@ -92,6 +139,35 @@ This extension is an independent project and is not affiliated with, endorsed by
 
 - Thanks to the open-source community for various tools and libraries that made this extension possible
 - Special thanks to all contributors who have helped improve this project
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**Extension not loading properly:**
+- Make sure you're using a recent version of Chrome
+- Try disabling and re-enabling the extension
+- Check for any error messages in the Chrome extension console
+
+**Comments not generating:**
+- Verify your API key is correct and has sufficient credits
+- Check your internet connection
+- Try switching to a different AI model
+
+**Can't find the comment toolbar:**
+- Make sure you've clicked on a comment button first
+- Try refreshing the LinkedIn page
+- Check if the extension is enabled in Chrome extensions
+
+### Debug Mode
+
+To enable debug mode:
+1. Right-click the extension icon
+2. Select "Inspect popup"
+3. In the console, type: `localStorage.setItem('debug', 'true')`
+4. Reload the LinkedIn page
+
+This will enable additional logging to help diagnose issues.
 
 ## 📞 Support
 
